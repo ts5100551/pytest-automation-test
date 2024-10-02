@@ -1,0 +1,15 @@
+Test1API:
+  url: https://test1/channel
+  users:
+    - id: user1
+      name: user name 1
+    - id: user2
+      name: user name 2
+
+Test2API:
+  url: https://test2/channel
+  users:
+    - id: user3
+      name: user name 3
+    - id: user4
+      name: user name 4

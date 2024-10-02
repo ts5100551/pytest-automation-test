@@ -1,0 +1,16 @@
+pytest==8.2.2
+requests
+pyyaml
+pandas
+cryptocode
+allure-pytest==2.13.5
+pyjwt
+pycryptodome
+loguru
+jsonschema
+selenium~=4.23.0
+openpyxl
+python-dotenv
+boto3
+pytest-xdist==3.6.1
+playwright

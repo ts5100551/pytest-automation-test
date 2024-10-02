@@ -1,0 +1,31 @@
+__pycache__
+.pytest_cache
+.hintrc
+.DS_Store
+
+# Environments
+.venv
+venv
+.vscode
+poetry.lock
+pyproject.toml
+.env
+/web/js/env.js
+
+# config file
+configurations/config.yaml
+
+# Report folder/files
+report/*/*/html/*
+report/*/*/json/*
+!report/*/*/json/history/
+report/*/*/json/history/*
+report/*/*/log/*
+report/backup/*
+web/report/*
+
+# Web driver
+geckodriver.log
+
+# ignore gitkeep file
+!.gitkeep

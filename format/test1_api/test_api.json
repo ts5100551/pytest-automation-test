@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "requestId": {
+      "type": "string",
+      "description": "Unique id for each query task"
+    },
+    "results": {
+      "type": "array",
+      "description": "Query result, one element represents the usage record",
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "email"
+          },
+          "name": {
+            "type": "string",
+            "description": "name"
+          },
+          "usage": {
+            "type": "array",
+            "description": "Device usage, one element represents the usage record of a device",
+            "items": {
+              "type": "object",
+              "properties": {
+                "devId": {
+                  "type": "string",
+                  "description": "Device ID"
+                },
+                "days": {
+                  "type": "integer",
+                  "description": "Number of days of usage"
+                },
+                "dates": {
+                  "type": "array",
+                  "description": "Dates of usage",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "devId",
+                "days",
+                "dates"
+              ]
+            }
+          }
+        },
+        "required": [
+          "email",
+          "name",
+          "usage"
+        ]
+      }
+    },
+    "startDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+      "description": "The beginning date of the range to query, formatted as 'YYYY-MM-DD'. Timezone will be UTC+0."
+    },
+    "endDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+      "description": "The ending date of the range to query, formatted as 'YYYY-MM-DD'. Timezone will be UTC+0."
+    }
+  },
+  "required": [
+    "requestId",
+    "results",
+    "startDate",
+    "endDate"
+  ]
+}
