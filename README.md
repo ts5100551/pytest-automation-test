@@ -1,5 +1,7 @@
 # Pytest Automation Test
 
+## 此專案僅為 Demo 專案，僅呈現整體架構，其測試資料有做遮蔽修改
+
 ## 簡介
 
 透過 Pytest 套件結合 Allure Report 套件達到自動化測試目的並產出 Test Report
